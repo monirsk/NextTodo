@@ -8,7 +8,7 @@ type TodoItemProps = {
 const TodoItem = ({ ItemName, date }: TodoItemProps) => {
   return (
     <div>
-      <div className="flex justify-between max-w-md my-10 ">
+      <div className="flex justify-between items-center max-w-md my-10 ">
         <div className="col-6">{ItemName}</div>
         <div className="col-4">{date}</div>
         <div className="col-2">

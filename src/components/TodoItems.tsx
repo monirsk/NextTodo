@@ -2,7 +2,6 @@ import React from "react";
 import TodoItem from "./TodoItem";
 
 type ItemType = {
-  id: number;
   ItemName: string;
   date: string;
 };
@@ -17,7 +16,7 @@ const TodoItems = ({ ItemList }: TodoItemsProps) => {
       {ItemList.map((item) => {
         return (
           <TodoItem
-            key={item.id}
+            key={item.ItemName}
             ItemName={item.ItemName}
             date={item.date}
           ></TodoItem>
