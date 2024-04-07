@@ -1,17 +1,16 @@
 import React from "react";
 
-type TodoItemType = {
-  id?: number;
+type TodoItemProps = {
   ItemName: string;
   date: string;
 };
 
-const TodoItem = (prop: TodoItemType) => {
+const TodoItem = ({ ItemName, date }: TodoItemProps) => {
   return (
     <div>
       <div className="flex justify-between max-w-md my-10 ">
-        <div className="col-6">{prop.ItemName}</div>
-        <div className="col-4">{prop.date}</div>
+        <div className="col-6">{ItemName}</div>
+        <div className="col-4">{date}</div>
         <div className="col-2">
           <button
             type="button"

@@ -1,9 +1,15 @@
 import AddTodo from "@/components/AddTodo";
 import AppName from "@/components/AppName";
-import TodoItem from "@/components/TodoItem";
+import TodoItems from "@/components/TodoItems";
+
+type ItemType = {
+  id: number;
+  ItemName: string;
+  date: string;
+};
 
 export default function Home() {
-  const ItemList = [
+  const ItemList: ItemType[] = [
     {
       id: 1,
       ItemName: "Buy Milk",
@@ -21,15 +27,7 @@ export default function Home() {
     <center>
       <AppName></AppName>
       <AddTodo></AddTodo>
-      {ItemList.map((item) => {
-        return (
-          <TodoItem
-            key={item.id}
-            ItemName={item.ItemName}
-            date={item.date}
-          ></TodoItem>
-        );
-      })}
+      <TodoItems ItemList={ItemList}></TodoItems>
     </center>
   );
 }
